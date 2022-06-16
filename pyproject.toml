@@ -6,9 +6,9 @@ authors = ["Nayam Amarshe", "TGS963"]
 packages = [{include = "fckoff"}]
 license="MIT"
 readme="README.MD"
-repository="https://github.com/NayamAmarshe/fckoff"
-homepage="https://github.com/NayamAmarshe/fckoff"
-documentation="https://github.com/NayamAmarshe/fckoff"
+repository="https://github.com/DalaiLamana/fckoff"
+homepage="https://github.com/DalaiLamana/fckoff"
+documentation="https://github.com/DalaiLamana/fckoff"
 keywords=["fckoff", "cli", "new tab"]
 
 [tool.poetry.dependencies]
