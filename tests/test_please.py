@@ -1,4 +1,4 @@
-from please import __version__
+from fckoff import __version__
 
 
 def test_version():

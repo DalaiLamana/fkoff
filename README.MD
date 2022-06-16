@@ -1,4 +1,4 @@
-# Please - New Tab Page for your Terminal
+# fckoff - New Tab Page for your Terminal
 Get a beautifully formatted minimalistic new tab page with a greeting, date and time, inspirational quotes, your personal tasks and to-do list everytime you open the terminal.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/25067102/173348894-09190c99-baff-477a-9b48-b4d3cff0f029.gif"></img></center>
@@ -11,19 +11,19 @@ Get a beautifully formatted minimalistic new tab page with a greeting, date and 
 2. Open your terminal and paste the command below:
 
    ```bash
-   pip install please-cli
+   pip install fckoff-cli
 
    # If you get an error about 'pip not found', just replace pip with pip3.
    ```
-3. To run **please** everytime you open the terminal:
+3. To run **fckoff** everytime you open the terminal:
    ```bash
    # FOR BASH
-   echo 'please' >> ~/.bashrc
+   echo 'fckoff' >> ~/.bashrc
    
    # FOR ZSH
-   echo 'please' >> ~/.zshrc
+   echo 'fckoff' >> ~/.zshrc
    ```
-4. That's it! Check if `please` command works in your terminal.
+4. That's it! Check if `fckoff` command works in your terminal.
 
 ### Method 2:
 
@@ -32,27 +32,27 @@ Get a beautifully formatted minimalistic new tab page with a greeting, date and 
 3. Open terminal and paste the command below:
 
    ```bash
-   pip install --user ~/Downloads/please_cli*
+   pip install --user ~/Downloads/fckoff_cli*
 
    # If you get an error about 'pip not found', just replace pip with pip3.
    ```
 
    Change the path of the file if you downloaded it elsewhere.
-3. To run **please** everytime you open the terminal:
+3. To run **fckoff** everytime you open the terminal:
    ```bash
    # FOR BASH
-   echo 'please' >> ~/.bashrc
+   echo 'fckoff' >> ~/.bashrc
    
    # FOR ZSH
-   echo 'please' >> ~/.zshrc
+   echo 'fckoff' >> ~/.zshrc
    ```
-4. That's it! Check if `please` command works in your terminal.
+4. That's it! Check if `fckoff` command works in your terminal.
 
-###### Having trouble with installation or have any ideas? Please create an issue ticket :)
+###### Having trouble with installation or have any ideas? fckoff create an issue ticket :)
 
 # Troubleshooting
 
-Getting a `command not found: please` error? That means the Python modules installation folder is not in PATH.
+Getting a `command not found: fckoff` error? That means the Python modules installation folder is not in PATH.
 To fix this:
 ```bash
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.profile
@@ -62,28 +62,28 @@ echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.profile
 
 ```bash
 # Show time, quotes and tasks
-please
+fckoff
 
 # Add a task
-please add "TASK NAME"
+fckoff add "TASK NAME"
 
 # Delete a task
-please delete <TASK NUMBER>
+fckoff delete <TASK NUMBER>
 
 # Mark task as done
-please done <TASK NUMBER>
+fckoff done <TASK NUMBER>
 
 # Mark task as undone
-please undone <TASK NUMBER>
+fckoff undone <TASK NUMBER>
 
 # Show tasks even if all tasks are markded as done
-please showtasks
+fckoff showtasks
 
 # Change your name
-please callme "NAME"
+fckoff callme "NAME"
 
 # Reset all settings and tasks
-please setup
+fckoff setup
 ```
 
 # Local Development
@@ -111,12 +111,12 @@ poetry shell
 poetry install
 ```
 
-- `please` will be available to use as a command in the virtual environment after using `poetry install`.
+- `fckoff` will be available to use as a command in the virtual environment after using `poetry install`.
 
 5. Finally, run the python script with:
 
 ```bash
-python please/please.py
+python fckoff/fckoff.py
 ```
 
 6. To build a WHL package:
@@ -132,10 +132,10 @@ poetry build
 Open your terminal and type:
 
 ```bash
-pip uninstall please-cli
+pip uninstall fckoff-cli
 ```
 
-and also edit your **.zshrc** or **.bashrc** file and remove the line that says `please` at the end of the file.
+and also edit your **.zshrc** or **.bashrc** file and remove the line that says `fckoff` at the end of the file.
 
 #
 

@@ -199,7 +199,7 @@ def move(old_index: int, new_index: int):
         print_tasks(config["tasks"])
     except:
         center_print(
-            "Please check the entered index values", style="black on bright_red"
+            "fckoff check the entered index values", style="black on bright_red"
         )
 
 
@@ -245,18 +245,17 @@ def print_tasks(forced_print: bool = False) -> None:
         center_print("[#61E294]Looking good, no pending tasks 😁[/]")
 
 
+import urllib.request, json 
 def getquotes() -> dict:
     """Select a random quote.
 
     Returns:
         dict: quote with its metadata
     """
-    __location__ = os.path.realpath(
-        os.path.join(os.getcwd(), os.path.dirname(__file__))
-    )
-    with open(os.path.join(__location__, "quotes.json"), "r") as qf:
-        quotes_file = json.load(qf)
-    return quotes_file[random.randrange(0, 500)]
+    
+    with urllib.request.urlopen("https://evilinsult.com/generate_insult.php?lang=en&amp;type=json") as url:
+        data = url.read().decode()
+    return data
 
 
 @app.command(short_help="Reset all data and run setup")
@@ -264,16 +263,16 @@ def setup() -> None:
     """Initialize the config file."""
     config = {}
     config["user_name"] = typer.prompt(
-        typer.style("Hello! What can I call you?", fg=typer.colors.CYAN)
+        typer.style("Fuck off! What's your bitch ass name?'", fg=typer.colors.CYAN)
     )
 
     code_markdown = Markdown(
         """
-        please callme <Your Name Goes Here>
+        fckoff callme <Your Name Goes Here>
     """
     )
-    center_print("\nThanks for letting me know your name!")
-    center_print("If you wanna change your name later, please use:", "red")
+    center_print("\nAnd you live with that?")
+    center_print("If you wanna change your name later, use:", "red")
     console.print(code_markdown)
 
     config["initial_setup_done"] = True
@@ -288,7 +287,7 @@ def show(ctx: typer.Context) -> None:
     user_name = config["user_name"]
 
     if ctx.invoked_subcommand is None:
-        date_text = f"[#FFBF00] Hello {user_name}! It's {date_now.strftime('%d %b | %I:%M %p')}[/]"
+        date_text = f"[#FFBF00] Fuck you, {user_name}! It's {date_now.strftime('%d %b | %I:%M %p')}[/]"
         try:
             if config["disable_line"]:
                 center_print(date_text)
@@ -297,17 +296,19 @@ def show(ctx: typer.Context) -> None:
         except:
             center_print(Rule(date_text, style="#FFBF00"))
         quote = getquotes()
-        center_print('[#63D2FF]"' + quote["content"] +
+        center_print('[#63D2FF]"' + quote +
                      '"[/]', "italic", wrap=True)
-        center_print("[#F03A47]- " + quote["author"] +
-                     "[/]\n", "italic", wrap=True)
+        #center_print('[#63D2FF]"' + quote["insult"] +
+        #             '"[/]', "italic", wrap=True)
+        #center_print("[#F03A47]- " + quote["createdby"] +
+        #             "[/]\n", "italic", wrap=True)
         print_tasks()
 
 
 def main() -> None:
     """Load config file and program initialization."""
     global config_path
-    config_path = os.path.join(expanduser("~"), ".config", "please")
+    config_path = os.path.join(expanduser("~"), ".config", "fckoff")
     if not os.path.exists(config_path):
         os.makedirs(config_path)
 

@@ -1,15 +1,15 @@
 [tool.poetry]
-name = "please-cli"
+name = "fckoff-cli"
 version = "0.1.2"
 description = "A new tab page for your terminal"
 authors = ["Nayam Amarshe", "TGS963"]
-packages = [{include = "please"}]
+packages = [{include = "fckoff"}]
 license="MIT"
 readme="README.MD"
-repository="https://github.com/NayamAmarshe/please"
-homepage="https://github.com/NayamAmarshe/please"
-documentation="https://github.com/NayamAmarshe/please"
-keywords=["please", "cli", "new tab"]
+repository="https://github.com/NayamAmarshe/fckoff"
+homepage="https://github.com/NayamAmarshe/fckoff"
+documentation="https://github.com/NayamAmarshe/fckoff"
+keywords=["fckoff", "cli", "new tab"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -31,4 +31,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-please="please.please:main"
+fckoff="fckoff.fckoff:main"
